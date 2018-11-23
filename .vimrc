@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+" Maintainer:
 "   Michael Villeneuve
 
 " Credit:
@@ -38,7 +38,7 @@
 "     -> 1.4.5 php cs fixer
 "    -> 1.5.0 mappings
 "      -> 1.5.1 laravel specific mappings
-"    -> 1.5.0 helper functions / auto commands
+"    -> 1.6.0 helper functions / auto commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -75,7 +75,7 @@ set clipboard=unnamedplus
 " -> Form the buffer list
 " -> Buffers unloaded from the buffer list
 " -> Tag completion
-" -> Included files 
+" -> Included files
 set complete=.,w,b,u,t,i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -102,7 +102,10 @@ endif
 " For Neovim 0.1.3 and 0.1.4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colorscheme night-owl
+try
+	colorscheme night-owl
+catch
+endtry
 
 " Small bugfix for the theme due to a confict with git-gutter
 highlight SignColumn guibg='#011627'
@@ -112,7 +115,7 @@ highlight SignColumn guibg='#011627'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Only works with a terminal that supports ligature
 " https://github.com/tonsky/FiraCode
-" 
+"
 " If you are on ubuntu and would like to use this font
 " I suggest that you take a look at the Kitty terminal
 " https://github.com/kovidgoyal/kitty
@@ -125,7 +128,7 @@ set guifont=Fira_Code
 " current position
 set number relativenumber
 
-" Highlight the current line and 
+" Highlight the current line and
 " show the absolute line number on the active line
 augroup numbertoggle
   autocmd!
@@ -142,10 +145,10 @@ if has("gui_running")
   set guioptions-=T
 
   "remove right-hand scroll bar
-  set guioptions-=r  
+  set guioptions-=r
 
   "remove left-hand scroll bar
-  set guioptions-=L  
+  set guioptions-=L
 
   " Format the tab label
   set guitablabel=%M\ %t
@@ -171,7 +174,7 @@ set tabstop=2
 " 1.1.5 Cursor
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " change to i-beam cursor when entering insert mode
-let &t_SI = "\<Esc>[5 q" 
+let &t_SI = "\<Esc>[5 q"
 
 " change to block cursor when leaving insert mode
 let &t_EI = "\<Esc>[2 q"
@@ -228,7 +231,7 @@ let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
 " 1.4.1 NERDTree
 " https://github.com/scrooloose/nerdtree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" will open up a window level NERD tree 
+" will open up a window level NERD tree
 " instead of a netrw in the target window.
 let NERDTreeHijackNetrw = 0
 
@@ -330,8 +333,8 @@ nmap <Leader>cc :!ctags<space>-R
 nmap <Leader>t :tag<space>
 
 " This is a last resort commande
-" Find any string from the current path 
-" In all files recursively 
+" Find any string from the current path
+" In all files recursively
 nmap <Leader>f :!grep<space>-rnw<space>'.'<space>-e<space>''<left>
 
 

@@ -8,8 +8,16 @@ This is my personal vim config, i use a specific stack so this is not language a
 
 Feel free to use this as you want!
 
+## Installation 
+Quick note on the installation. This will first create a backup of you current .vimrc and .vim in ~/.vim-backup
+```bash
+git clone https://github.com/villeneuve-michael/vimrc
+cd vimrc
+sh install.sh
+```
 
 ## Table Of Contents
+This is the .vimrc table of content
 * 1.0.0 general settings
 * 1.1.0 theme
   * 1.1.1 color scheme
@@ -30,6 +38,8 @@ Feel free to use this as you want!
 *  1.6.0 helper functions / auto command
 
 # Plugins list
+List of all plugins. I need to clean this up a bit, lot's of trial & errors. I'm still experimenting on what's useful and what's not!
+
 | Plugin name        | Description  | Type |
 | ------------- |-------------|:-------------:|
 | [Vundle](https://github.com/VundleVim/Vundle.vim) | Plugin Manager | General |
