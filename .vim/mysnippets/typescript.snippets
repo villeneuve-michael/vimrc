@@ -1,0 +1,34 @@
+snippet test "Bootstrap a test" !b
+import expect from 'expect';
+import {cloneDeep} from 'lodash';
+import Vuex, {ActionTree} from 'vuex';
+import {store as storeConfig} from '@/store';
+import $1 from '@/components/$1.vue';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+
+describe('$1.vue', () => {
+  let wrapper: any;
+  let store: any;
+
+  beforeEach(() => {
+    const localVue = createLocalVue();
+    localVue.use(Vuex);
+    store = new Vuex.Store(cloneDeep(storeConfig));
+    wrapper = shallowMount($1, {
+      localVue,
+      store,
+    });
+  });
+});
+endsnippet
+
+snippet it "starts a test"
+it('$1', () => {
+  expect($2);
+});
+endsnippet
+
+snippet exp "export a const"
+export const $1 = '$1';
+endsnippet
+

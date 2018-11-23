@@ -1,0 +1,56 @@
+snippet vueC "description"
+<template>
+  $3
+</template>
+
+<script lang="ts">
+  import { Component, Vue } from 'vue-property-decorator';
+  import { State } from 'vuex-class';
+
+  @Component({
+    components: {
+    },
+  })
+  export default class `!p snip.rv = snip.basename` extends Vue {
+    @State('$1', {namespace: '$2'}) public user!: User;
+  }
+</script>
+
+<style scoped lang="scss">
+</style>
+endsnippet
+
+snippet vueModal "description"
+<div class="modal-login">
+  <div class="modal-body">
+    <div class="content">
+      <form @submit.prevent="login">
+        <div class="toast toast-error" v-if="error" v-html="error"></div>
+        <div class="form-group">
+          <label class="form-label" for="username">Username</label>
+          <input class="form-input" type="text" name="username" id="username" :value="username" @input="updateUsername">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" :class="{ 'loading': isLoading }">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
+endsnippet
+
+snippet state "State vuex-class"
+@State('$1', {namespace: '$3'}) public $1!: $2;
+endsnippet
+
+snippet pro "Scaffold a function"
+protected $1(${2:event: EventInput}) {
+  $3
+}
+endsnippet
+
+snippet cl "console.log"
+console.log($1);
+endsnippet
