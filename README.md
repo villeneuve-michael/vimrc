@@ -8,8 +8,11 @@ This is my personal vim config, i use a specific stack so this is not language a
 
 Feel free to use this as you want!
 
+## Demo
+![Demo](https://media.giphy.com/media/52EZy28Mxp7Bodug0A/giphy.gif)
+
 ## Installation 
-Quick note on the installation. This will first create a backup of you current .vimrc and .vim in ~/.vim-backup
+Quick note on the installation. This will first create a backup of you current .vimrc and .vim in ~/.vim-backup and after copy the files.
 ```bash
 git clone https://github.com/villeneuve-michael/vimrc
 cd vimrc
@@ -34,7 +37,7 @@ This is the .vimrc table of content
   * 1.4.4 ultisnippet
   * 1.4.5 php cs fixer
 *  1.5.0 mappings
-  *  1.5.1 laravel specific mappings
+  * 1.5.1 laravel specific mappings
 *  1.6.0 helper functions / auto command
 
 # Plugins list
@@ -58,7 +61,7 @@ List of all plugins. I need to clean this up a bit, lot's of trial & errors. I'm
 | [vim-fugitive](https://github.com/tpope/vim-fugitive) | A git wrapper | git |
 | [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | Enhances the git workflow | git |
 | [vimagit](https://github.com/jreybert/vimagit) | From a very single vim buffer, you can perform main git operations in few key press. | git |
-| [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) | Full path fuzzy file, buffer, mru, tag, ... finder for Vim. | Navgigation |
+| [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) | Full path fuzzy file, buffer, mru, tag, ... finder for Vim. | Navigation |
 | [typescript-vim](https://github.com/leafgarland/typescript-vim) | Syntax file and other settings for TypeScript. | Typescript |
 | [tsuquyomi](https://github.com/Quramy/tsuquyomi) | Make your Vim a TypeScript IDE. | Typescript |
 | [php.vim](https://github.com/StanAngeloff/php.vim) | An up-to-date Vim syntax for PHP. | PHP |
